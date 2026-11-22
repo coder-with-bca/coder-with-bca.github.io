@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coder-with-bca.github.io/sitemap.xml
