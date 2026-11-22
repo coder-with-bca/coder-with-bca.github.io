@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topics - coder_with_bca</title>
+<meta name="description" content="Free coding topics from coder_with_bca: Python, C, JavaScript, how tech works and career skills. Each video comes with its code and notes.">
+<link rel="icon" href="https://github.com/coder-with-bca.png?size=64">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <img src="https://github.com/coder-with-bca.png?size=68" alt="coder_with_bca logo">
+    <span class="brand">coder_with_bca</span>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="topics.html" class="active">Topics</a>
+      <a href="https://www.youtube.com/@coder_with_bca">YouTube</a>
+      <a href="https://t.me/coder_with_bca">Telegram</a>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Topics</h2>
+    <p class="section-sub">Watch the video, then open the code and try it yourself. New topics are added as new videos come out.</p>
+
+    <div class="topic-block" id="python">
+      <h2><em>Python</em></h2>
+      <p>Beginner-friendly Python: the small mistakes everyone makes, explained one at a time.</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/GtCr4eMXowQ" title="Python list copy() explained" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Why b = a does not copy a list</h3>
+            <p>Assigning a list to a new name only makes a second label for the same list. Use copy() to get a real copy.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre><span class="comment"># b = a does NOT copy the list</span>
+a = [1, 2, 3]
+b = a          <span class="comment"># b is just another name for the same list</span>
+b.append(4)
+print(a)       <span class="comment"># [1, 2, 3, 4]  - a changed too!</span>
+
+<span class="comment"># the right way</span>
+b = a.copy()   <span class="comment"># a real, separate copy</span>
+b.append(5)
+print(a)       <span class="comment"># [1, 2, 3, 4]  - a is safe now</span></pre>
+            </details>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/7pc-1mPpZMU" title="Python range() explained" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Where did 5 go in range(1, 5)?</h3>
+            <p>range() stops one step before the end value. range(1, 5) gives 1, 2, 3, 4 - never 5.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>print(list(range(1, 5)))   <span class="comment"># [1, 2, 3, 4]</span>
+print(list(range(5)))      <span class="comment"># [0, 1, 2, 3, 4]</span>
+
+<span class="comment"># want 1 to 5? go one past it</span>
+for i in range(1, 6):
+    print(i)               <span class="comment"># 1 2 3 4 5</span></pre>
+            </details>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/4aH6etVYH8Y" title="Python floor division explained" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Why is -7 // 2 = -4?</h3>
+            <p>Floor division rounds down, and "down" with negatives means away from zero.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>print(7 / 2)    <span class="comment"># 3.5   (normal division)</span>
+print(7 // 2)   <span class="comment"># 3     (floor division rounds down)</span>
+
+print(-7 // 2)  <span class="comment"># -4, not -3</span>
+<span class="comment"># -3.5 rounded DOWN is -4</span></pre>
+            </details>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/2miMjxaeYG4" title="Python input() vs int()" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Why does 5 + 2 become 52?</h3>
+            <p>input() always gives you text. "5" + "2" sticks together as "52". Convert with int() first.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>a = input("First number: ")   <span class="comment"># "5" - text, not a number</span>
+b = input("Second number: ")  <span class="comment"># "2"</span>
+print(a + b)                  <span class="comment"># 52  (text joined)</span>
+
+a = int(input("First number: "))
+b = int(input("Second number: "))
+print(a + b)                  <span class="comment"># 7   (real addition)</span></pre>
+            </details>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/-CYIBrzFLzc" title="Build a 25-minute study timer in Python" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Build a 25-minute study timer</h3>
+            <p>A mini project: a Pomodoro-style focus timer using the time module.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>import time
+
+minutes = 25
+print("Study time! Focus for", minutes, "minutes.")
+time.sleep(minutes * 60)
+print("Time's up - take a 5 minute break!")</pre>
+            </details>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Vi-BCDjjczg" title="Split a lunch bill with Python" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Split a lunch bill with Python</h3>
+            <p>A tiny real-life script: who owes whom after lunch with friends.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>bill = 450
+friends = 3
+share = bill / friends
+print("Each person pays:", share)        <span class="comment"># 150.0</span>
+
+<span class="comment"># round to whole rupees</span>
+print("Rounded:", round(share))</pre>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="topic-block" id="c">
+      <h2><em>C Programming</em></h2>
+      <p>The first language in most BCA courses.</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/1Sl83wX2pcc" title="C scanf %s explained" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Why scanf cannot read a full name</h3>
+            <p>%s stops at the first space, so "Aman Kumar" becomes just "Aman". Here is the fix.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>#include &lt;stdio.h&gt;
+
+int main() {
+    char name[50];
+
+    <span class="comment">// stops at the first space</span>
+    scanf("%s", name);
+
+    <span class="comment">// reads the whole line, spaces included</span>
+    scanf(" %49[^\n]", name);
+
+    printf("%s", name);
+    return 0;
+}</pre>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="topic-block" id="javascript">
+      <h2><em>JavaScript</em></h2>
+      <p>The language of the web - and its strange surprises.</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/0t7p6usIn7c" title="JavaScript 12 divided by 0" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>12 / 0 = Infinity?</h3>
+            <p>JavaScript does not crash on division by zero. It quietly answers Infinity. Try it in your browser console.</p>
+            <details>
+              <summary>Code from this video</summary>
+              <pre>console.log(12 / 0);   <span class="comment">// Infinity</span>
+console.log(-12 / 0);  <span class="comment">// -Infinity</span>
+console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="topic-block" id="howtech">
+      <h2><em>How Tech Works</em></h2>
+      <p>The systems behind the apps you use, explained simply.</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/p1jJIlfB8vg" title="How DNS works" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>How DNS works</h3>
+            <p>How a name like google.com turns into an IP address your computer can actually call.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Z_q02nFkibk" title="Fake call scam awareness" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>A fake call can sound real</h3>
+            <p>Before sending money on any urgent call, run these checks first.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/IAZyT_fVUv4" title="Voice cloning scam awareness" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>The voice sounds like family?</h3>
+            <p>Cloned voices are real now. Pause and verify before you pay anyone.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="topic-block" id="career">
+      <h2><em>Career and Skills</em></h2>
+      <p>What to learn, what to skip, and tech news without the noise.</p>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/sfrwdNUpFQI" title="AI vs Developer vs Data career" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>AI vs Developer vs Data</h3>
+            <p>Try this before picking a tech career - a longer video that compares the three paths honestly.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/NJ4ZGADvSpo" title="Three things to do during BCA" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Only 3 things to do during BCA</h3>
+            <p>Cut the noise. These three habits matter more than everything else combined.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/oe8d6BBVMAI" title="Microsoft voluntary exit explained" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>Microsoft's 60,000 voluntary exit offer</h3>
+            <p>Layoffs or not? What the number actually means, explained simply.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/5vMwwuW-GVY" title="Microsoft numbers explained short" loading="lazy" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3>The truth behind the number</h3>
+            <p>The short version: 60,000 eligible does not mean 60,000 laid off.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="socials">
+      <a href="https://www.youtube.com/@coder_with_bca">YouTube</a>
+      <a href="https://www.instagram.com/coder_with_bca">Instagram</a>
+      <a href="https://t.me/coder_with_bca">Telegram</a>
+      <a href="https://github.com/coder-with-bca">GitHub</a>
+    </div>
+    <p>coder_with_bca - free coding education for beginners.</p>
+  </div>
+</footer>
+
+</body>
+  </html>
