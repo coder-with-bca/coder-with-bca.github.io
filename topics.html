@@ -37,8 +37,8 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="topics.html" aria-current="page">Topics</a></li>
-      <li><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
-      <li><a href="https://t.me/coder_with_bca">Telegram</a></li>
+      <li class="nav-extra"><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
+      <li class="nav-extra"><a href="https://t.me/coder_with_bca">Telegram</a></li>
     </ul>
     <a class="nav-cta" href="https://www.youtube.com/@coder_with_bca">Subscribe</a>
   </nav>
@@ -56,7 +56,7 @@
       <p>Beginner-friendly Python: the small mistakes everyone makes, explained one at a time.</p>
       <div class="video-grid">
 
-        <div class="video-card">
+        <div class="video-card" id="v-list-copy">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/GtCr4eMXowQ" title="Python list copy() explained" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Why b = a does not copy a list</h3>
@@ -77,7 +77,7 @@ print(a)       <span class="comment"># [1, 2, 3, 4]  - a is safe now</span></pre
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-range">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/7pc-1mPpZMU" title="Python range() explained" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Where did 5 go in range(1, 5)?</h3>
@@ -94,7 +94,7 @@ for i in range(1, 6):
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-floor-division">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/4aH6etVYH8Y" title="Python floor division explained" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Why is -7 // 2 = -4?</h3>
@@ -110,7 +110,7 @@ print(-7 // 2)  <span class="comment"># -4, not -3</span>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-input-int">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/2miMjxaeYG4" title="Python input() vs int()" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Why does 5 + 2 become 52?</h3>
@@ -128,7 +128,7 @@ print(a + b)                  <span class="comment"># 7   (real addition)</span>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-study-timer">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/-CYIBrzFLzc" title="Build a 25-minute study timer in Python" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Build a 25-minute study timer</h3>
@@ -145,7 +145,7 @@ print("Time's up - take a 5 minute break!")</pre>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-lunch-bill">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Vi-BCDjjczg" title="Split a lunch bill with Python" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Split a lunch bill with Python</h3>
@@ -171,7 +171,7 @@ print("Rounded:", round(share))</pre>
       <p>The first language in most BCA courses.</p>
       <div class="video-grid">
 
-        <div class="video-card">
+        <div class="video-card" id="v-scanf-name">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/1Sl83wX2pcc" title="C scanf %s explained" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Why scanf cannot read a full name</h3>
@@ -204,7 +204,7 @@ int main() {
       <p>The language of the web - and its strange surprises.</p>
       <div class="video-grid">
 
-        <div class="video-card">
+        <div class="video-card" id="v-divide-zero">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/0t7p6usIn7c" title="JavaScript 12 divided by 0" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>12 / 0 = Infinity?</h3>
@@ -226,7 +226,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
       <p>The systems behind the apps you use, explained simply.</p>
       <div class="video-grid">
 
-        <div class="video-card">
+        <div class="video-card" id="v-dns">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/p1jJIlfB8vg" title="How DNS works" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>How DNS works</h3>
@@ -234,7 +234,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-fake-call">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/Z_q02nFkibk" title="Fake call scam awareness" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>A fake call can sound real</h3>
@@ -242,7 +242,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-voice-clone">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/IAZyT_fVUv4" title="Voice cloning scam awareness" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>The voice sounds like family?</h3>
@@ -258,7 +258,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
       <p>What to learn, what to skip, and tech news without the noise.</p>
       <div class="video-grid">
 
-        <div class="video-card">
+        <div class="video-card" id="v-career-paths">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/sfrwdNUpFQI" title="AI vs Developer vs Data career" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>AI vs Developer vs Data</h3>
@@ -266,7 +266,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-bca-three-things">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/NJ4ZGADvSpo" title="Three things to do during BCA" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Only 3 things to do during BCA</h3>
@@ -274,7 +274,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-microsoft-exit">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/oe8d6BBVMAI" title="Microsoft voluntary exit explained" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>Microsoft's 60,000 voluntary exit offer</h3>
@@ -282,7 +282,7 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
           </div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card" id="v-microsoft-number">
           <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/5vMwwuW-GVY" title="Microsoft numbers explained short" loading="lazy" allowfullscreen></iframe></div>
           <div class="video-body">
             <h3>The truth behind the number</h3>
@@ -318,9 +318,9 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
       <div>
         <h3>Channels</h3>
         <ul>
-          <li><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
+          <li class="nav-extra"><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
           <li><a href="https://www.instagram.com/coder_with_bca">Instagram</a></li>
-          <li><a href="https://t.me/coder_with_bca">Telegram</a></li>
+          <li class="nav-extra"><a href="https://t.me/coder_with_bca">Telegram</a></li>
         </ul>
       </div>
       <div>
@@ -338,5 +338,25 @@ console.log(0 / 0);    <span class="comment">// NaN (not a number)</span></pre>
     </div>
   </div>
 </footer>
+
+<nav class="bottom-bar" aria-label="Quick actions">
+  <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/></svg><span>Home</span></a>
+  <a href="topics.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="14" y2="17"/></svg><span>Topics</span></a>
+  <button type="button" id="search-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><span>Search</span></button>
+  <button type="button" id="share-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.6"/><circle cx="17" cy="6" r="2.6"/><circle cx="17" cy="18" r="2.6"/><line x1="8.3" y1="10.8" x2="14.7" y2="7.4"/><line x1="8.3" y1="13.2" x2="14.7" y2="16.6"/></svg><span>Share</span></button>
+</nav>
+
+<div class="search-overlay" id="search-overlay" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search videos">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      <input id="search-input" type="search" placeholder="Search videos, e.g. python list" aria-label="Search videos" autocomplete="off">
+      <button type="button" id="search-close">Close</button>
+    </div>
+    <ul id="search-results"></ul>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
 </body>
 </html>
