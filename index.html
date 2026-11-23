@@ -37,8 +37,8 @@
     <ul class="nav-links">
       <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="topics.html">Topics</a></li>
-      <li><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
-      <li><a href="https://t.me/coder_with_bca">Telegram</a></li>
+      <li class="nav-extra"><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
+      <li class="nav-extra"><a href="https://t.me/coder_with_bca">Telegram</a></li>
     </ul>
     <a class="nav-cta" href="https://www.youtube.com/@coder_with_bca">Subscribe</a>
   </nav>
@@ -200,9 +200,9 @@
       <div>
         <h3>Channels</h3>
         <ul>
-          <li><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
+          <li class="nav-extra"><a href="https://www.youtube.com/@coder_with_bca">YouTube</a></li>
           <li><a href="https://www.instagram.com/coder_with_bca">Instagram</a></li>
-          <li><a href="https://t.me/coder_with_bca">Telegram</a></li>
+          <li class="nav-extra"><a href="https://t.me/coder_with_bca">Telegram</a></li>
         </ul>
       </div>
       <div>
@@ -220,5 +220,25 @@
     </div>
   </div>
 </footer>
+
+<nav class="bottom-bar" aria-label="Quick actions">
+  <a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/></svg><span>Home</span></a>
+  <a href="topics.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="14" y2="17"/></svg><span>Topics</span></a>
+  <button type="button" id="search-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><span>Search</span></button>
+  <button type="button" id="share-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.6"/><circle cx="17" cy="6" r="2.6"/><circle cx="17" cy="18" r="2.6"/><line x1="8.3" y1="10.8" x2="14.7" y2="7.4"/><line x1="8.3" y1="13.2" x2="14.7" y2="16.6"/></svg><span>Share</span></button>
+</nav>
+
+<div class="search-overlay" id="search-overlay" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search videos">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      <input id="search-input" type="search" placeholder="Search videos, e.g. python list" aria-label="Search videos" autocomplete="off">
+      <button type="button" id="search-close">Close</button>
+    </div>
+    <ul id="search-results"></ul>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
 </body>
 </html>
