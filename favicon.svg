@@ -1,4 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="30" fill="#0b1f3a" stroke="#38bdf8" stroke-width="3"/>
-  <text x="32" y="41" font-family="Consolas, Menlo, monospace" font-size="19" font-weight="bold" fill="#38bdf8" text-anchor="middle">{&gt;_}</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16294d"/>
+      <stop offset="1" stop-color="#0a1730"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="0.56" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#bg)" stroke="#38bdf8" stroke-width="2.5"/>
+  <circle cx="32" cy="32" r="27" fill="url(#gloss)"/>
+  <text x="31" y="41" font-family="Consolas, Menlo, monospace" font-size="21" font-weight="bold" fill="#38bdf8" text-anchor="middle">{&gt;_}</text>
 </svg>
